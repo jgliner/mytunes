@@ -12,6 +12,12 @@ var SongQueue = Songs.extend({
   dequeue: function(song) {
     this.remove(song);
     console.info('SONG DEQUEUED')
+  },
+
+  playNext: function() {
+    this.shift();
+    console.info('PLAYING NEXT ||', 'Length is now: ', this.length);
+    this.at(0).play();
   }
 
 });
