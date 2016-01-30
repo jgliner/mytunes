@@ -2,12 +2,16 @@
 var SongQueue = Songs.extend({
 
   initialize: function(song) {
-    this.on('change', this.enqueue, this);
   },
 
   enqueue: function(song) {
     this.add(song);
     console.info('SONG QUEUED')
+  },
+
+  dequeue: function(song) {
+    this.remove(song);
+    console.info('SONG DEQUEUED')
   }
 
 });
