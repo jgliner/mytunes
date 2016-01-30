@@ -6,7 +6,7 @@ var SongQueue = Songs.extend({
 
   enqueue: function(song) {
     this.add(song);
-    console.info('SONG QUEUED')
+    console.info('SONG QUEUED ||', 'Length is now: ', this.length);
   },
 
   dequeue: function(song) {
