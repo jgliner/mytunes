@@ -2,7 +2,7 @@ describe('SongQueue', function() {
   var playSpy, songData1, songData2;
 
   beforeEach(function() {
-    playSpy = sinon.spy(SongQueue.prototype, 'playFirst');
+    playSpy = sinon.spy(SongQueue.prototype, 'add');
     songData1 = {
       artist: 'data',
       url: '/test/testsong.mp3',
@@ -16,7 +16,7 @@ describe('SongQueue', function() {
   });
 
   afterEach(function() {
-    SongQueue.prototype.playFirst.restore();
+    SongQueue.prototype.remove();
   });
 
   describe('when a song is added', function() {
@@ -71,16 +71,6 @@ describe('SongQueue', function() {
       songQueue.at(0).dequeue();
       expect(removeSpy).to.have.been.called;
       SongQueue.prototype.remove.restore();
-    });
-  });
-
-  describe('playFirst', function() {
-    it('plays the first song in the queue', function() {
-      sinon.spy(SongModel.prototype, 'play');
-      var songQueue = new SongQueue(songData1);
-      songQueue.playFirst();
-      expect(songQueue.at(0).play).to.have.been.called;
-      SongModel.prototype.play.restore();
     });
   });
 });

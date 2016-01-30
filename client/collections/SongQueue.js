@@ -18,6 +18,10 @@ var SongQueue = Songs.extend({
     this.shift();
     console.info('PLAYING NEXT ||', 'Length is now: ', this.length);
     this.at(0).play();
+  },
+
+  playFirst: function() {
+    this.at(0).play();
   }
 
 });
