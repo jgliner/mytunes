@@ -1,4 +1,9 @@
 // AppView.js - Defines a backbone view class for the whole music app.
+
+// Responsibilities:
+// - Gather everything together and build a dynamic DOM
+// - Listen for change in current song to send to PlayerView
+
 var AppView = Backbone.View.extend({
 
   initialize: function(params) {

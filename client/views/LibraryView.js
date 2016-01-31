@@ -1,4 +1,9 @@
 // LibraryView.js - Defines a backbone view class for the music library.
+
+// Responsibilities:
+// - Consolidate all LibraryEntryView elements
+// - Listen for a change and rebuild the DOM when fired
+
 var LibraryView = Backbone.View.extend({
 
   tagName: "table",

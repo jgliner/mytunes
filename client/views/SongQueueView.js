@@ -1,4 +1,9 @@
 // SongQueueView.js - Defines a backbone view class for the song queue.
+
+// Responsibilities:
+// - Consolidate all SongQueueEntryView elements
+// - Listen for a change and rebuild the DOM when fired
+
 var SongQueueView = Backbone.View.extend({
 
   tagName: 'table',

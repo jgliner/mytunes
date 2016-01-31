@@ -1,4 +1,9 @@
 // SongQueue.js - Defines a backbone model class for the song queue.
+
+// Responsibilities
+// - Extend songs so that they only get new methods when they are in the queue
+// - Define callable methods that the AppModel will invoke
+
 var SongQueue = Songs.extend({
 
   initialize: function(song) {

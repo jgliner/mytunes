@@ -1,4 +1,10 @@
 // PlayerView.js - Defines a backbone view class for the music player.
+
+// Responsibilities:
+// - Render the player itself
+// - Send intent on end events
+// - Handle music sources
+
 var PlayerView = Backbone.View.extend({
 
   // HTML5 (native) audio tag is being used

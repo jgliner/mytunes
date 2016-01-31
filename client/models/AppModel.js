@@ -1,4 +1,9 @@
 // App.js - Defines a backbone model class for the whole app.
+
+// Responsibilities:
+// - Instantiate current song and queue on init
+// - Call methods on songs in the library or queue
+
 var AppModel = Backbone.Model.extend({
 
   initialize: function(params) {

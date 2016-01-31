@@ -1,4 +1,8 @@
 // SongModel.js - Defines a backbone model class for songs.
+
+// Responsibilities:
+// - Define basic methods for all songs that SongQueue will eventually invoke
+
 var SongModel = Backbone.Model.extend({
 
   play: function() {

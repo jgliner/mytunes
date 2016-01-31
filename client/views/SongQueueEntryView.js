@@ -1,4 +1,9 @@
 // SongQueueEntryView.js - Defines a backbone view class for the song queue entries.
+
+// Responsibilities:
+// - Build out individual DOM elements for the whole queue
+// - Send intent to remove a song on click events to the queue
+
 var SongQueueEntryView = Backbone.View.extend({
 
   tagName: 'tr',
